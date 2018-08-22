@@ -4,3 +4,9 @@ services:
                 image: amancevice/superset:0.18.5
                 ports:
                         - "80:8088"
+        postgres:
+                image: mdillon/postgis
+                ports:
+                        - "5432"
+                volumes:
+                        - ./postgres-data:/var/lib/postgresql/data
