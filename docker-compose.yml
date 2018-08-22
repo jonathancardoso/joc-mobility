@@ -1,0 +1,6 @@
+version: "2"
+services:
+        superset:
+                image: amancevice/superset:0.18.5
+                ports:
+                        - "80:8088"
