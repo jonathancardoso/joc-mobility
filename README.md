@@ -3,8 +3,9 @@ Nome: Jonathan de Oliveira Cardoso
 
 Orientador: Éverlin Fighera Costa Marques
 
-Banca: Fabiano Baldo
-       Rebeca Schroeder Freitas
+Banca 1: Fabiano Baldo
+
+Banca 2: Rebeca Schroeder Freitas
 
 # O trabalho
 File: Trabalho de Conclusão de Curso.pdf
