@@ -4,7 +4,6 @@ Nome: Jonathan de Oliveira Cardoso
 Orientador: Éverlin Fighera Costa Marques
 
 Banca: Fabiano Baldo
-
        Rebeca Schroeder Freitas
 
 # O trabalho
