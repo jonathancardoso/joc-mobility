@@ -1,12 +1,35 @@
 version: "2"
 services:
-        superset:
-                image: amancevice/superset:0.18.5
-                ports:
-                        - "80:8088"
-        postgres:
-                image: mdillon/postgis
-                ports:
-                        - "5432"
-                volumes:
-                        - ./postgres-data:/var/lib/postgresql/data
+    superset:
+        container_name: superset
+        image: amancevice/superset:0.27.0
+        volumes:
+            - ./superset-data/home:/home/superset
+            - ./superset-data/etc:/etc/superset
+            - ./superset-data/lib:/var/lib/superset
+        ports:
+            - 43193:8088
+        restart: always
+    postgres:
+         container_name: pgpostgis
+         #image: mdillon/postgis
+         image: starefossen/pgrouting:10.1-2.4-2.5
+         restart: always
+         ports:
+             - 5432:5432
+         volumes:
+             - ./postgres-data:/var/lib/postgresql/data
+         environment:
+             - POSTGRES_USER = ##########
+             - POSTGRES_PASSWORD = ##########
+    pgadmin:
+        container_name: pgadmin4 
+        image: dpage/pgadmin4
+        restart: always
+        ports:
+            - 43192:80
+        volumes:
+            - ./pgadmin-data:/var/lib/pgadmin
+        environment: 
+            - PGADMIN_DEFAULT_EMAIL=##########
+            - PGADMIN_DEFAULT_PASSWORD=##########
